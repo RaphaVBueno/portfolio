@@ -8,6 +8,20 @@ export default function Home() {
   const [showProjects, setShowProjects] = useState(true)
   const [showSkills, setShowSkills] = useState(false)
   const [showhardSkills, setShowhardSkills] = useState(false)
+  const techs = [
+    'JavaScript',
+    'TypeScript',
+    'NextJS',
+    'React',
+    'Redux',
+    'HTML5',
+    'CSS3',
+    'Node.js',
+    'Express',
+    'PostgreSQL',
+    'Prisma',
+    'Git',
+  ]
 
   return (
     <div>
@@ -123,10 +137,10 @@ export default function Home() {
           {showSkills && (
             <div className={styles.softSkills}>
               <ul>
-                <li>Liderança</li>
-                <li>Resolução de problemas</li>
                 <li>Trabalho em equipe</li>
                 <li>Comunicação eficaz</li>
+                <li>Resolução de problemas</li>
+                <li>Liderança</li>
                 <li>Eficiente</li>
                 <li>Facilidade para aprender</li>
                 <li>Comprometimento</li>
@@ -135,7 +149,24 @@ export default function Home() {
               </ul>
             </div>
           )}
-          {showhardSkills && <div className={styles.hardSkills}></div>}
+          {showhardSkills && (
+            <div className={styles.teste}>
+              <div className={styles.hardSkills}>
+                {techs.map((tech) => (
+                  <div key={tech}>
+                    {' '}
+                    <p>{tech}</p>
+                    <Image
+                      src={`/${tech}.png`}
+                      alt={`${tech} logo`}
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       </main>
       <footer></footer>
