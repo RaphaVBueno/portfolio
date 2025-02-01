@@ -2,8 +2,13 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
+import { useState } from 'react'
 
 export default function Home() {
+  const [showProjects, setShowProjects] = useState(true)
+  const [showSkills, setShowSkills] = useState(false)
+  const [showhardSkills, setShowhardSkills] = useState(false)
+
   return (
     <div>
       <header className={styles.header}>
@@ -49,28 +54,88 @@ export default function Home() {
         </section>
         <section className={styles.section2}>
           <div className={styles.menu}>
-            <button className={styles.menuButton1}>Projetos</button>
-            <button className={styles.menuButton}>hard skills</button>
-            <button className={styles.menuButton}>soft skills</button>
+            <button
+              className={styles.menuButton}
+              onClick={() => (
+                setShowProjects(true),
+                setShowSkills(false),
+                setShowhardSkills(false)
+              )}
+            >
+              Projetos
+            </button>
+            <button
+              className={styles.menuButton}
+              onClick={() => (
+                setShowProjects(false),
+                setShowSkills(false),
+                setShowhardSkills(true)
+              )}
+            >
+              hard skills
+            </button>
+            <button
+              className={styles.menuButton}
+              onClick={() => (
+                setShowProjects(false),
+                setShowSkills(true),
+                setShowhardSkills(false)
+              )}
+            >
+              soft skills
+            </button>
           </div>
-          <div className={styles.content}>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-              reprehenderit veritatis repellat minima repellendus? Possimus eos
-              inventore consectetur, iste vitae tenetur placeat at voluptate cum
-              provident cupiditate? Pariatur, iste id. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Omnis quo sed distinctio non
-              aspernatur laborum eius, ea hic facere fugiat veritatis nisi!
-              Atque unde perspiciatis, nam dolorem nulla excepturi nihil? Lorem
-              ipsum dolor sit amet consectetur, adipisicing elit. Hic corrupti
-              libero, accusantium dolorum, est placeat ad eveniet mollitia
-              maiores corporis, tenetur quisquam natus deserunt iusto modi! Quo
-              necessitatibus recusandae modi. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Unde earum rerum repellendus ratione
-              maiores illum! A, nam animi! Autem eius quidem asperiores quasi
-              tempora vel sunt nam exercitationem porro at?
-            </p>
-          </div>
+          {showProjects && (
+            <div className={styles.projects}>
+              <div>
+                <div className={styles.projectsImage}>
+                  <Image
+                    src="/avatar.png"
+                    alt="meu avatar"
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <div className={styles.projectsText}>
+                  <h1>Lista de Tarefas</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis, rerum labore! Aspernatur sint, itaque recusandae
+                    ratione dignissimos iste nisi qui ipsum amet pariatur quam
+                    dolorum, ipsam, assumenda nostrum at saepe. Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Repudiandae
+                    reiciendis porro nesciunt minima odio, assumenda omnis
+                    placeat enim, sint, at facere adipisci nostrum quis ipsa
+                    eveniet corrupti debitis labore deserunt. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Ut, quaerat
+                    laboriosam modi asperiores odio minus totam expedita maxime
+                    vero illo earum sequi! Sit reiciendis odit atque soluta
+                    repellendus vitae doloremque!
+                  </p>
+                  <div>
+                    link github, link projeto online, quem sabe colocar os icons
+                    das tecnologias utilizadas
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {showSkills && (
+            <div className={styles.softSkills}>
+              <ul>
+                <li>Liderança</li>
+                <li>Resolução de problemas</li>
+                <li>Trabalho em equipe</li>
+                <li>Comunicação eficaz</li>
+                <li>Eficiente</li>
+                <li>Facilidade para aprender</li>
+                <li>Comprometimento</li>
+                <li>blabalbalablablba</li>
+                <li>blabalbalablablablab</li>
+              </ul>
+            </div>
+          )}
+          {showhardSkills && <div className={styles.hardSkills}></div>}
         </section>
       </main>
       <footer></footer>

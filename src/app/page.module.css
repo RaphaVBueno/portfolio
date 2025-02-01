@@ -106,25 +106,55 @@
   justify-content: space-between;
 }
 
-.content {
+.projects {
+  padding: 40px;
   background-color: #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 12px 12px;
 }
 
-.content > p {
+.projects > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.projectsImage {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.projectsText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
+}
+
+.projectsText > h1 {
   color: black;
 }
 
-.menuButton1 {
-  background-color: #d4d4d4;
+.projectsText > p {
   color: black;
-  width: 350px;
-  padding: 12px 10px;
-  border-radius: 12px 12px 0 0;
-  font-size: 1.3rem;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
+}
+
+.softSkills {
+  padding: 40px;
+  background-color: #d4d4d4;
+  border-radius: 0 0 12px 12px;
+}
+
+.softSkills > ul {
+  columns: 2;
+  list-style-position: inside;
+}
+
+.softSkills > ul > li {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .menuButton {
