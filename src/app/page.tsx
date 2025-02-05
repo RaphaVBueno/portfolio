@@ -22,6 +22,29 @@ export default function Home() {
     'Prisma',
     'Git',
   ]
+  const contacts = [
+    {
+      name: 'Linkedin',
+      link: 'https://www.linkedin.com/in/raphael-vieira-bueno-41323a332/',
+      icon: '/Linkedin.png',
+    },
+    {
+      name: 'Github',
+      link: 'https://github.com/RaphaVBueno',
+      icon: '/GitHub.png',
+    },
+    { name: 'Email', link: '', icon: '/Email.png' },
+    {
+      name: 'Telefone',
+      link: 'api.whatsapp.com/send?1=pt_BR&phone=5512988152045',
+      icon: '/WhatsApp.png',
+    },
+    {
+      name: 'Instagram',
+      link: 'https://www.instagram.com/raphabueno_personal/#',
+      icon: '/Instagram.png',
+    },
+  ]
 
   return (
     <div>
@@ -69,7 +92,9 @@ export default function Home() {
         <section className={styles.section2}>
           <div className={styles.menu}>
             <button
-              className={styles.menuButton}
+              className={
+                showProjects ? styles.menuButtonActive : styles.menuButton
+              }
               onClick={() => (
                 setShowProjects(true),
                 setShowSkills(false),
@@ -79,7 +104,9 @@ export default function Home() {
               Projetos
             </button>
             <button
-              className={styles.menuButton}
+              className={
+                showhardSkills ? styles.menuButtonActive : styles.menuButton
+              }
               onClick={() => (
                 setShowProjects(false),
                 setShowSkills(false),
@@ -89,7 +116,9 @@ export default function Home() {
               hard skills
             </button>
             <button
-              className={styles.menuButton}
+              className={
+                showSkills ? styles.menuButtonActive : styles.menuButton
+              }
               onClick={() => (
                 setShowProjects(false),
                 setShowSkills(true),
@@ -145,7 +174,6 @@ export default function Home() {
                 <li>Facilidade para aprender</li>
                 <li>Comprometimento</li>
                 <li>blabalbalablablba</li>
-                <li>blabalbalablablablab</li>
               </ul>
             </div>
           )}
@@ -169,7 +197,20 @@ export default function Home() {
           )}
         </section>
       </main>
-      <footer></footer>
+      <footer className={styles.footer}>
+        {contacts.map((contact) => (
+          <div key={contact.name}>
+            {' '}
+            <Image
+              src={contact.icon}
+              alt={`${contact.name} logo`}
+              width={40}
+              height={40}
+            />
+            <p>{contact.name}</p>
+          </div>
+        ))}
+      </footer>
     </div>
   )
 }

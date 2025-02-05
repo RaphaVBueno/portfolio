@@ -112,6 +112,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 0 0 12px 12px;
+  box-shadow: 3px 6px 4px 3px #00000054;
 }
 
 .projects > div {
@@ -129,11 +130,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   padding-left: 30px;
 }
 
 .projectsText > h1 {
   color: black;
+  margin-bottom: 8px;
 }
 
 .projectsText > p {
@@ -144,17 +147,22 @@
   padding: 40px;
   background-color: #d4d4d4;
   border-radius: 0 0 12px 12px;
+  box-shadow: 3px 6px 4px 3px #00000054;
 }
 
 .softSkills > ul {
-  columns: 2;
-  list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
 }
 
 .softSkills > ul > li {
   color: black;
   font-size: 1.5rem;
   margin-bottom: 10px;
+  width: 40%;
+  box-sizing: border-box;
 }
 
 .hardSkills {
@@ -165,6 +173,7 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
+  box-shadow: 3px 6px 4px 3px #00000054;
 }
 
 .hardSkills > div {
@@ -179,6 +188,7 @@
   border-radius: 25px 0 0 0;
   padding: 25px 18px;
   border-bottom: solid 5px var(--cor1);
+  box-shadow: 2px 4px 4px 1px #00000040;
 }
 
 .hardSkills > div > p {
@@ -198,37 +208,62 @@
   text-transform: uppercase;
 }
 
+.menuButtonActive {
+  background-color: #d4d4d4;
+  color: black;
+  width: 350px;
+  padding: 12px 10px;
+  border-radius: 12px 12px 0 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1350px) {
-  .menuButton {
+  .menuButton,
+  .menuButtonActive {
     width: 300px;
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 1150px) {
-  .menuButton {
+  .menuButton,
+  .menuButtonActive {
     width: 200px;
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .menuButton {
+  .menuButton,
+  .menuButtonActive {
     width: 150px;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 580px) {
-  .menuButton {
+  .menuButton,
+  .menuButtonActive {
     width: 125px;
     border-radius: 12px 12px 0 0;
   }
 }
 
 @media (max-width: 480px) {
-  .menuButton {
+  .menuButton,
+  .menuButtonActive {
     width: 100px;
     padding: 3px 2px;
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
