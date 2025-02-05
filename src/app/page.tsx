@@ -33,10 +33,10 @@ export default function Home() {
       link: 'https://github.com/RaphaVBueno',
       icon: '/GitHub.png',
     },
-    { name: 'Email', link: '', icon: '/Email.png' },
+    { name: 'Email', link: 'mailto:rafavbueno@gmail.com', icon: '/Email.png' },
     {
       name: 'Telefone',
-      link: 'api.whatsapp.com/send?1=pt_BR&phone=5512988152045',
+      link: 'https://api.whatsapp.com/send?1=pt_BR&phone=5512988152045',
       icon: '/WhatsApp.png',
     },
     {
@@ -198,18 +198,23 @@ export default function Home() {
         </section>
       </main>
       <footer className={styles.footer}>
-        {contacts.map((contact) => (
-          <div key={contact.name}>
-            {' '}
-            <Image
-              src={contact.icon}
-              alt={`${contact.name} logo`}
-              width={40}
-              height={40}
-            />
-            <p>{contact.name}</p>
-          </div>
-        ))}
+        <h2>Contatos</h2>
+        <div>
+          {contacts.map((contact) => (
+            <div key={contact.name}>
+              {' '}
+              <Image
+                src={contact.icon}
+                alt={`${contact.name} logo`}
+                width={40}
+                height={40}
+              />
+              <a href={contact.link} target="_blank" rel="external">
+                {contact.name}
+              </a>
+            </div>
+          ))}
+        </div>
       </footer>
     </div>
   )
