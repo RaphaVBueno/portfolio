@@ -32,12 +32,14 @@ function Footer() {
         {contacts.map((contact) => (
           <div key={contact.name}>
             {' '}
-            <Image
-              src={contact.icon}
-              alt={`${contact.name} logo`}
-              width={40}
-              height={40}
-            />
+            <a href={contact.link} target="_blank" rel="external">
+              <Image
+                src={contact.icon}
+                alt={`${contact.name} logo`}
+                width={40}
+                height={40}
+              />
+            </a>
             <a href={contact.link} target="_blank" rel="external">
               {contact.name}
             </a>

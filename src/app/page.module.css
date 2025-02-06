@@ -25,12 +25,12 @@
   margin-bottom: 200px;
 }
 
-.divNav {
+.nav {
   display: flex;
   justify-content: space-between;
 }
 
-.divNav > nav {
+.nav > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@
 
 .avatar {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 .buttonCv {

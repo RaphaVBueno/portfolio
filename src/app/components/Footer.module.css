@@ -23,4 +23,9 @@
   gap: 10px;
   height: 80px;
   width: 73px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer > div > div:hover {
+  transform: scale(1.2);
 }

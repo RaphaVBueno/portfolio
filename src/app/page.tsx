@@ -10,12 +10,13 @@ export default function Home() {
     <div>
       <header className={styles.header}>
         <h1>R</h1>
-        <div className={styles.divNav}>
-          <nav>Sobre mim</nav>
-          <nav>Projetos</nav>
-          <nav>Hard skills</nav>
-          <nav>Soft Skills</nav>
-        </div>
+
+        <nav className={styles.nav}>
+          <a href="#sobre">Sobre mim</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#projetos">Hard skills</a>
+          <a href="#projetos">Soft Skills</a>
+        </nav>
       </header>
       <main>
         <section className={styles.section}>
@@ -34,7 +35,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className={styles.section2}>
+        <section className={styles.section2} id="sobre">
           <h2>Sobre Mim</h2>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
