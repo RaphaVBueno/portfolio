@@ -1,0 +1,26 @@
+.footer {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.footer > h2 {
+  margin-bottom: 100px;
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 80px;
+  width: 73px;
+}
