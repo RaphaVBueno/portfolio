@@ -1,7 +1,9 @@
 .footer {
-  width: 80vw;
+  border-top: solid 2px var(--cor1);
+  width: 100vw;
   margin: auto;
   margin-bottom: 100px;
+  padding-top: 20px;
 }
 
 .footer > h2 {
@@ -9,6 +11,8 @@
 }
 
 .footer > div {
+  width: 80vw;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

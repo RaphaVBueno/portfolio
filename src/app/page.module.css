@@ -36,6 +36,18 @@
   align-items: center;
   font-weight: bold;
   font-size: 1.2rem;
+  background: linear-gradient(to left, #d4d4d4 50%, var(--cor1) 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: background-position 0.4s ease-in-out;
+}
+
+.nav > a:hover {
+  background-position: 0;
 }
 
 .section {
@@ -43,7 +55,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
 }
 
 .section > div > h1 {
@@ -88,7 +100,7 @@
 .section2 {
   width: 80vw;
   margin: auto;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
 }
 
 .section2 > h2 {

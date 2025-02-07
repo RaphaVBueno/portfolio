@@ -2,10 +2,25 @@ import Image from 'next/image'
 import { useState } from 'react'
 import styles from './Info.module.css'
 
-function Info() {
-  const [showProjects, setShowProjects] = useState(true)
-  const [showSkills, setShowSkills] = useState(false)
-  const [showhardSkills, setShowhardSkills] = useState(false)
+type InfoProps = {
+  showProjects: boolean
+  setShowProjects: (showProjects: boolean) => void
+  showhardSkills: boolean
+  setShowhardSkills: (showhardSkills: boolean) => void
+  showSkills: boolean
+  setShowSkills: (showSkills: boolean) => void
+}
+
+function Info(props: InfoProps) {
+  const {
+    showProjects,
+    setShowProjects,
+    showhardSkills,
+    setShowhardSkills,
+    showSkills,
+    setShowSkills,
+  } = props
+
   const techs = [
     'JavaScript',
     'TypeScript',

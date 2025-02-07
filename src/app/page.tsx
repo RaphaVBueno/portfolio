@@ -4,18 +4,49 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Info from './components/Info'
 import Footer from './components/Footer'
+import { useState } from 'react'
 
 export default function Home() {
+  const [showProjects, setShowProjects] = useState(true)
+  const [showSkills, setShowSkills] = useState(false)
+  const [showhardSkills, setShowhardSkills] = useState(false)
+
   return (
     <div>
       <header className={styles.header}>
         <h1>R</h1>
-
         <nav className={styles.nav}>
           <a href="#sobre">Sobre mim</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#projetos">Hard skills</a>
-          <a href="#projetos">Soft Skills</a>
+          <a
+            href="#projetos"
+            onClick={() => (
+              setShowProjects(true),
+              setShowhardSkills(false),
+              setShowSkills(false)
+            )}
+          >
+            Projetos
+          </a>
+          <a
+            href="#projetos"
+            onClick={() => (
+              setShowProjects(false),
+              setShowhardSkills(true),
+              setShowSkills(false)
+            )}
+          >
+            Hard skills
+          </a>
+          <a
+            href="#projetos"
+            onClick={() => (
+              setShowProjects(false),
+              setShowhardSkills(false),
+              setShowSkills(true)
+            )}
+          >
+            Soft Skills
+          </a>
         </nav>
       </header>
       <main>
@@ -50,7 +81,14 @@ export default function Home() {
             assumenda dolor delectus at. Iste iusto deleniti aliquam non ullam?
           </p>
         </section>
-        <Info></Info>
+        <Info
+          showProjects={showProjects}
+          setShowProjects={setShowProjects}
+          showhardSkills={showhardSkills}
+          setShowhardSkills={setShowhardSkills}
+          showSkills={showSkills}
+          setShowSkills={setShowSkills}
+        ></Info>
       </main>
       <Footer></Footer>
     </div>
