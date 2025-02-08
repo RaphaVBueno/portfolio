@@ -18,15 +18,16 @@
 }
 
 .projects {
-  padding: 40px;
+  padding: 50px 50px 10px 50px;
   background-color: #d4d4d4;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 12px 12px 12px;
   box-shadow: 3px 6px 4px 3px #00000054;
 }
 
 .projects > div {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  margin-bottom: 60px;
 }
 
 .projectsImage {
