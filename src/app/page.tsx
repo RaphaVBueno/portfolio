@@ -4,46 +4,57 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Info from './components/Info'
 import Footer from './components/Footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Projects from './components/Projects'
 
 export default function Home() {
-  const [showProjects, setShowProjects] = useState(true)
   const [showSkills, setShowSkills] = useState(false)
-  const [showhardSkills, setShowhardSkills] = useState(false)
+  const [showhardSkills, setShowhardSkills] = useState(true)
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal')
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active')
+          } else {
+            entry.target.classList.remove('active')
+          }
+        })
+      },
+      { threshold: 0.2 }
+    )
+
+    elements.forEach((el) => observer.observe(el))
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el))
+    }
+  }, [])
 
   return (
-    <div>
+    <div className="page">
       <header className={styles.header}>
         <h1>R</h1>
         <nav className={styles.nav}>
           <a href="#sobre">Sobre mim</a>
           <a
             href="#projetos"
-            onClick={() => (
-              setShowProjects(true),
-              setShowhardSkills(false),
-              setShowSkills(false)
-            )}
+            onClick={() => (setShowhardSkills(false), setShowSkills(false))}
           >
             Projetos
           </a>
           <a
-            href="#projetos"
-            onClick={() => (
-              setShowProjects(false),
-              setShowhardSkills(true),
-              setShowSkills(false)
-            )}
+            href="#skills"
+            onClick={() => (setShowhardSkills(true), setShowSkills(false))}
           >
             Hard skills
           </a>
           <a
-            href="#projetos"
-            onClick={() => (
-              setShowProjects(false),
-              setShowhardSkills(false),
-              setShowSkills(true)
-            )}
+            href="#skills"
+            onClick={() => (setShowhardSkills(false), setShowSkills(true))}
           >
             Soft Skills
           </a>
@@ -66,29 +77,29 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className={styles.section2} id="sobre">
+        <section className={`${styles.section2} reveal`} id="sobre">
           <h2>Sobre Mim</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Consequuntur, ad excepturi. Modi, corrupti possimus. Numquam sunt a
-            commodi adipisci laborum esse similique? Ex voluptas dolorum optio
-            similique magni tempore quidem. Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Repellat sed libero facere assumenda
-            nemo ipsam asperiores iusto, obcaecati, quas tempora eos voluptatem
-            velit, quo eius ducimus nesciunt voluptas earum beatae. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Iste quisquam eius qui
-            maxime facilis. Asperiores provident dolores vel tempora facere
-            assumenda dolor delectus at. Iste iusto deleniti aliquam non ullam?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Reprehenderit cum tempore quia assumenda dolorum accusantium aliquid
+            recusandae accusamus laborum officiis? Placeat aut repudiandae
+            doloremque quia modi minima repellendus totam tempore. Lorem ipsum,
+            dolor sit amet consectetur adipisicing elit. Sed ratione est
+            molestias suscipit at earum ad illo veritatis? Rerum ducimus
+            explicabo quam assumenda sapiente? Sequi minus ipsam nobis expedita
+            consequatur? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Reprehenderit illo, quisquam beatae cumque unde, rem porro
+            similique perferendis fugiat quos enim iste blanditiis dolores
+            laboriosam corporis exercitationem. Itaque, distinctio officia.
           </p>
         </section>
         <Info
-          showProjects={showProjects}
-          setShowProjects={setShowProjects}
           showhardSkills={showhardSkills}
           setShowhardSkills={setShowhardSkills}
           showSkills={showSkills}
           setShowSkills={setShowSkills}
-        ></Info>
+        />
+        <Projects />
       </main>
       <Footer></Footer>
     </div>

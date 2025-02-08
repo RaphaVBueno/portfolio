@@ -20,8 +20,6 @@
 .projects {
   padding: 40px;
   background-color: #d4d4d4;
-  display: flex;
-  flex-direction: column;
   border-radius: 0 0 12px 12px;
   box-shadow: 3px 6px 4px 3px #00000054;
 }
@@ -41,8 +39,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   padding-left: 30px;
+}
+
+.projectsText > div {
+  color: black;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .projectsText > h1 {
@@ -52,6 +57,27 @@
 
 .projectsText > p {
   color: black;
+}
+
+.projectsLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.projectsLinks > div {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+}
+
+.projectsLinks > div:hover {
+  transform: scale(1.2);
+}
+
+.projectsLinks > div > a {
+  font-size: 0.9rem;
 }
 
 .softSkills {

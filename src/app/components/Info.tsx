@@ -1,10 +1,7 @@
 import Image from 'next/image'
-import { useState } from 'react'
 import styles from './Info.module.css'
 
 type InfoProps = {
-  showProjects: boolean
-  setShowProjects: (showProjects: boolean) => void
   showhardSkills: boolean
   setShowhardSkills: (showhardSkills: boolean) => void
   showSkills: boolean
@@ -12,14 +9,7 @@ type InfoProps = {
 }
 
 function Info(props: InfoProps) {
-  const {
-    showProjects,
-    setShowProjects,
-    showhardSkills,
-    setShowhardSkills,
-    showSkills,
-    setShowSkills,
-  } = props
+  const { showhardSkills, setShowhardSkills, showSkills, setShowSkills } = props
 
   const techs = [
     'JavaScript',
@@ -37,75 +27,24 @@ function Info(props: InfoProps) {
   ]
 
   return (
-    <section className={styles.section2} id="projetos">
+    <section className={`${styles.section2} reveal`} id="skills">
       <div className={styles.menu}>
-        <button
-          className={showProjects ? styles.menuButtonActive : styles.menuButton}
-          onClick={() => (
-            setShowProjects(true),
-            setShowSkills(false),
-            setShowhardSkills(false)
-          )}
-        >
-          Projetos
-        </button>
         <button
           className={
             showhardSkills ? styles.menuButtonActive : styles.menuButton
           }
-          onClick={() => (
-            setShowProjects(false),
-            setShowSkills(false),
-            setShowhardSkills(true)
-          )}
+          onClick={() => (setShowSkills(false), setShowhardSkills(true))}
         >
           hard skills
         </button>
         <button
           className={showSkills ? styles.menuButtonActive : styles.menuButton}
-          onClick={() => (
-            setShowProjects(false),
-            setShowSkills(true),
-            setShowhardSkills(false)
-          )}
+          onClick={() => (setShowSkills(true), setShowhardSkills(false))}
         >
           soft skills
         </button>
       </div>
-      {showProjects && (
-        <div className={styles.projects}>
-          <div>
-            <div className={styles.projectsImage}>
-              <Image
-                src="/avatar.png"
-                alt="meu avatar"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className={styles.projectsText}>
-              <h1>Lista de Tarefas</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                rerum labore! Aspernatur sint, itaque recusandae ratione
-                dignissimos iste nisi qui ipsum amet pariatur quam dolorum,
-                ipsam, assumenda nostrum at saepe. Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Repudiandae reiciendis porro
-                nesciunt minima odio, assumenda omnis placeat enim, sint, at
-                facere adipisci nostrum quis ipsa eveniet corrupti debitis
-                labore deserunt. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Ut, quaerat laboriosam modi asperiores odio
-                minus totam expedita maxime vero illo earum sequi! Sit
-                reiciendis odit atque soluta repellendus vitae doloremque!
-              </p>
-              <div>
-                link github, link projeto online, quem sabe colocar os icons das
-                tecnologias utilizadas
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+
       {showSkills && (
         <div className={styles.softSkills}>
           <ul>

@@ -28,7 +28,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <h2>Contatos</h2>
-      <div>
+      <div className="reveal">
         {contacts.map((contact) => (
           <div key={contact.name}>
             {' '}
