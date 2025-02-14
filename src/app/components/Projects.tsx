@@ -20,7 +20,7 @@ function Projects() {
       </div>{' '}
       <div className={styles.projects}>
         {projects.map((project) => (
-          <div>
+          <div key={project.title}>
             <div className={styles.projectsImage}>
               <Image
                 src={project.image}
