@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-//import './globals.css'
 import Info from './components/Info'
 import Footer from './components/Footer'
 import { useEffect, useState } from 'react'
@@ -42,12 +41,6 @@ export default function Home() {
         <nav className={styles.nav}>
           <a href="#sobre">Sobre mim</a>
           <a
-            href="#projetos"
-            onClick={() => (setShowhardSkills(false), setShowSkills(false))}
-          >
-            Projetos
-          </a>
-          <a
             href="#skills"
             onClick={() => (setShowhardSkills(true), setShowSkills(false))}
           >
@@ -58,6 +51,12 @@ export default function Home() {
             onClick={() => (setShowhardSkills(false), setShowSkills(true))}
           >
             Soft Skills
+          </a>
+          <a
+            href="#projetos"
+            onClick={() => (setShowhardSkills(false), setShowSkills(false))}
+          >
+            Projetos
           </a>
         </nav>
       </header>
