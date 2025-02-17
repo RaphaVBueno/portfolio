@@ -80,17 +80,14 @@ export default function Home() {
         <section className={`${styles.section2} reveal`} id="sobre">
           <h2>Sobre Mim</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Reprehenderit cum tempore quia assumenda dolorum accusantium aliquid
-            recusandae accusamus laborum officiis? Placeat aut repudiandae
-            doloremque quia modi minima repellendus totam tempore. Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Sed ratione est
-            molestias suscipit at earum ad illo veritatis? Rerum ducimus
-            explicabo quam assumenda sapiente? Sequi minus ipsam nobis expedita
-            consequatur? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Reprehenderit illo, quisquam beatae cumque unde, rem porro
-            similique perferendis fugiat quos enim iste blanditiis dolores
-            laboriosam corporis exercitationem. Itaque, distinctio officia.
+            Desenvolvedor web fullstack em transição de carreira, com formação
+            em Educação Física e técnico em Administração. Experiência em
+            liderança, gestão e treinamento de equipes, e atendimento do
+            cliente, atualmente coordenador técnico em uma academia. Possuo
+            experiência com JavaScript, TypeScript, Node.js, Express, NextJS,
+            React, Redux, HTML5, CSS3, Git, PostgreSQL e Prisma ORM. Buscando
+            oportunidades como desenvolvedor para aplicar minhas habilidades
+            técnicas e contribuir para projetos inovadores.
           </p>
         </section>
         <Info
