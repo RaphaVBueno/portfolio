@@ -6,6 +6,7 @@ import Info from './components/Info'
 import Footer from './components/Footer'
 import { useEffect, useState } from 'react'
 import Projects from './components/Projects'
+import MenuHamburger from './components/MenuHamburguer'
 
 export default function Home() {
   const [showSkills, setShowSkills] = useState(false)
@@ -61,6 +62,7 @@ export default function Home() {
               Projetos
             </a>
           </nav>
+          <MenuHamburger />
         </div>
       </header>
       <main>
