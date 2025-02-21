@@ -40,7 +40,12 @@ function Footer() {
                 height={40}
               />
             </a>
-            <a href={contact.link} target="_blank" rel="external">
+            <a
+              className={styles.contactLink}
+              href={contact.link}
+              target="_blank"
+              rel="external"
+            >
               {contact.name}
             </a>
           </div>

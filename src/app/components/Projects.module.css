@@ -1,5 +1,5 @@
 .section2 {
-  width: 80vw;
+  max-width: 1440px;
   margin: auto;
   margin-bottom: 300px;
 }
@@ -57,6 +57,7 @@
 
 .projectsText > p {
   color: black;
+  line-height: 1.5;
 }
 
 .projectsLinks {
@@ -78,4 +79,35 @@
 .projectsLinks > div > a {
   font-size: 0.9rem;
   color: black;
+}
+
+@media (max-width: 480px) {
+  .section2 {
+    width: 90vw;
+  }
+
+  .projectsTitle {
+    width: 200px;
+  }
+
+  .projects {
+    padding: 50px 10px 50px 10px;
+  }
+
+  .projects > div {
+    display: block;
+  }
+
+  .projectsText {
+    padding-left: 10px;
+  }
+
+  .projectsText > p {
+    margin-bottom: 30px;
+  }
+
+  .projectsImage > img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

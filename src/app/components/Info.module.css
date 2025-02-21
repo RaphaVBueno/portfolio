@@ -1,5 +1,5 @@
 .section2 {
-  width: 80vw;
+  max-width: 1440px;
   margin: auto;
   margin-bottom: 300px;
 }
@@ -86,7 +86,6 @@
   font-weight: bold;
   cursor: pointer;
   border: none;
-  text-transform: uppercase;
 }
 
 .menuButtonActive {
@@ -99,45 +98,29 @@
   font-weight: bold;
   cursor: pointer;
   border: none;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1350px) {
-  .menuButton,
-  .menuButtonActive {
-    width: 300px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 1150px) {
-  .menuButton,
-  .menuButtonActive {
-    width: 200px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .menuButton,
-  .menuButtonActive {
-    width: 150px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .menuButton,
-  .menuButtonActive {
-    width: 125px;
-    border-radius: 12px 12px 0 0;
-  }
 }
 
 @media (max-width: 480px) {
-  .menuButton,
-  .menuButtonActive {
-    width: 100px;
-    padding: 3px 2px;
+  .section2 {
+    width: 90vw;
+  }
+
+  .hardSkills {
+    padding: 40px 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .softSkills {
+    border-radius: 0 0 12px 12px;
+  }
+
+  .softSkills > ul {
+    display: block;
+  }
+
+  .softSkills > ul > li {
+    font-size: 1.3rem;
+    width: 100%;
+    line-height: 2.5;
   }
 }

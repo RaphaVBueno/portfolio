@@ -35,13 +35,13 @@ function Info(props: InfoProps) {
           }
           onClick={() => (setShowSkills(false), setShowhardSkills(true))}
         >
-          hard skills
+          HARD SKILLS
         </button>
         <button
           className={showSkills ? styles.menuButtonActive : styles.menuButton}
           onClick={() => (setShowSkills(true), setShowhardSkills(false))}
         >
-          soft skills
+          SOFT SKILLS
         </button>
       </div>
 

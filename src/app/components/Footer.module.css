@@ -11,12 +11,11 @@
 }
 
 .footer > div {
-  width: 80vw;
+  max-width: 1440px;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
 }
 
 .footer > div > div {
@@ -32,4 +31,12 @@
 
 .footer > div > div:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .footer > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
 }

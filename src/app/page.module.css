@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 .header {
-  width: 80vw;
+  max-width: 1440px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -42,7 +42,7 @@
 }
 
 .section {
-  width: 80vw;
+  max-width: 1440px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -89,7 +89,7 @@
 }
 
 .section2 {
-  width: 80vw;
+  max-width: 1440px;
   margin: auto;
   margin-bottom: 300px;
 }
@@ -100,4 +100,22 @@
 
 .section2 > p {
   font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .section {
+    display: block;
+    width: 90vw;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .section2 > p {
+    width: 90vw;
+    margin: auto;
+    font-size: 1.3rem;
+  }
 }
