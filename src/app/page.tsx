@@ -37,31 +37,34 @@ export default function Home() {
   return (
     <div className="page">
       <header className={styles.header}>
-        <h1>R</h1>
-        <nav className={styles.nav}>
-          <a href="#sobre">Sobre mim</a>
-          <a
-            href="#skills"
-            onClick={() => (setShowhardSkills(true), setShowSkills(false))}
-          >
-            Hard skills
-          </a>
-          <a
-            href="#skills"
-            onClick={() => (setShowhardSkills(false), setShowSkills(true))}
-          >
-            Soft Skills
-          </a>
-          <a
-            href="#projetos"
-            onClick={() => (setShowhardSkills(false), setShowSkills(false))}
-          >
-            Projetos
-          </a>
-        </nav>
+        <div className={styles.headerContainer}>
+          <h1>R</h1>
+          <nav className={styles.nav}>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre">Sobre mim</a>
+            <a
+              href="#skills"
+              onClick={() => (setShowhardSkills(true), setShowSkills(false))}
+            >
+              Hard skills
+            </a>
+            <a
+              href="#skills"
+              onClick={() => (setShowhardSkills(false), setShowSkills(true))}
+            >
+              Soft Skills
+            </a>
+            <a
+              href="#projetos"
+              onClick={() => (setShowhardSkills(false), setShowSkills(false))}
+            >
+              Projetos
+            </a>
+          </nav>
+        </div>
       </header>
       <main>
-        <section className={styles.section}>
+        <section className={styles.section} id="inicio">
           <div>
             <p>Olá visitante, eu sou</p>
             <h1>Raphael V. Bueno</h1>

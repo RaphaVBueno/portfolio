@@ -2,17 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--background-color);
+  border-bottom: solid 2px var(--cor1);
+}
+
+.headerContainer {
   max-width: 1440px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 20 0;
-  margin-bottom: 180px;
+  background-color: var(--background-color);
 }
 
-.header > h1 {
+.headerContainer > h1 {
   font-family: 'Ephesis', cursive;
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: var(--cor1);
 }
 
@@ -44,6 +52,7 @@
 .section {
   max-width: 1440px;
   margin: auto;
+  margin-top: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 300px;
@@ -104,6 +113,18 @@
 }
 
 @media (max-width: 480px) {
+  .headerContainer {
+    padding-left: 10px;
+  }
+
+  .headerContainer > h1 {
+    font-size: 3.5rem;
+  }
+
+  .headerContainer > nav {
+    display: none;
+  }
+
   .section {
     display: block;
     width: 90vw;
