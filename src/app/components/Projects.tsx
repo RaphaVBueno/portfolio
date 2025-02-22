@@ -26,7 +26,7 @@ function Projects() {
                 src={project.image}
                 alt={`print do projeto ${project.title}`}
                 width={530}
-                height={250}
+                height={260}
               />
             </div>
             <div className={styles.projectsText}>

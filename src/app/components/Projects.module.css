@@ -58,6 +58,7 @@
 .projectsText > p {
   color: black;
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 .projectsLinks {
@@ -108,6 +109,38 @@
 
   .projectsImage > img {
     width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .section2 {
+    width: 95vw;
+  }
+
+  .projects {
+    padding: 50px 10px 50px 10px;
+  }
+
+  .projects > div {
+    display: block;
+  }
+
+  .projectsText {
+    padding-left: 10px;
+  }
+
+  .projectsText > p {
+    margin-bottom: 30px;
+  }
+
+  .projectsImage {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projectsImage > img {
+    width: 70%;
     margin-bottom: 20px;
   }
 }

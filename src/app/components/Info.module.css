@@ -107,6 +107,20 @@
 
   .hardSkills {
     padding: 40px 0;
+  }
+
+  .softSkills > ul > li {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    width: 95vw;
+  }
+
+  .hardSkills {
+    gap: 48px;
     border-radius: 0 0 12px 12px;
   }
 
@@ -116,10 +130,10 @@
 
   .softSkills > ul {
     display: block;
+    padding-left: 15px;
   }
 
   .softSkills > ul > li {
-    font-size: 1.3rem;
     width: 100%;
     line-height: 2.5;
   }
