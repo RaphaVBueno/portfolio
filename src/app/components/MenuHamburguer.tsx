@@ -14,7 +14,7 @@ function MenuHamburger() {
         <Image src="/menu.png" alt="logo" width={35} height={35} />
       </button>
       {menuOpen && (
-        <div className={styles.menuList}>
+        <div className={`${styles.menuList} ${menuOpen && styles.open}`}>
           <ul>
             <li>
               <a href="#inicio" onClick={() => setMenuOpen(false)}>

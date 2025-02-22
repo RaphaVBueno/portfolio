@@ -111,9 +111,13 @@
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .projectsLinks {
+    justify-content: space-between;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1017px) {
   .section2 {
     width: 95vw;
   }
@@ -142,5 +146,17 @@
   .projectsImage > img {
     width: 70%;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1018px) and (max-width: 1280px) {
+  .section2 {
+    width: 95vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1017px) {
+  .projectsImage > img {
+    width: 60%;
   }
 }

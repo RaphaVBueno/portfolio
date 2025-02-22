@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 648px) {
   .menuContainer {
     display: flex;
     align-items: center;
@@ -15,6 +15,17 @@
     border: none;
   }
 
+  @keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+
   .menuList {
     position: absolute;
     top: 74px;
@@ -23,6 +34,13 @@
     background-color: rgba(0, 0, 0, 0.918);
     padding: 0 10px 10px 10px;
     z-index: 1000;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .menuList.open {
+    animation: slideDown 0.8s ease-out forwards;
   }
 
   .menuList > ul > li {
