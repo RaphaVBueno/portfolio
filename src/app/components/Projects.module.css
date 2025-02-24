@@ -109,11 +109,16 @@
 
   .projectsImage > img {
     width: 100%;
+    height: 100%;
     margin-bottom: 20px;
   }
 
   .projectsLinks {
     justify-content: space-between;
+  }
+
+  .projectsLinks > div > a {
+    font-size: 0.8rem;
   }
 }
 

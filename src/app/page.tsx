@@ -62,7 +62,10 @@ export default function Home() {
               Projetos
             </a>
           </nav>
-          <MenuHamburger />
+          <MenuHamburger
+            setShowhardSkills={setShowhardSkills}
+            setShowSkills={setShowSkills}
+          />
         </div>
       </header>
       <main>

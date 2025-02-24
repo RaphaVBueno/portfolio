@@ -2,17 +2,33 @@ import Image from 'next/image'
 import styles from './MenuHamburger.module.css'
 import { useState } from 'react'
 
-function MenuHamburger() {
+type MenuHamburgerProps = {
+  setShowhardSkills: React.Dispatch<React.SetStateAction<boolean>>
+  setShowSkills: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function MenuHamburger(props: MenuHamburgerProps) {
+  const { setShowhardSkills, setShowSkills } = props
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <div className={styles.menuContainer}>
-      <button
-        className={styles.menuHamburger}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <Image src="/menu.png" alt="logo" width={35} height={35} />
-      </button>
+      {menuOpen ? (
+        <button
+          className={styles.menuHamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <Image src="/x.png" alt="logo" width={35} height={35} />
+        </button>
+      ) : (
+        <button
+          className={styles.menuHamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <Image src="/menu.png" alt="logo" width={35} height={35} />
+        </button>
+      )}
+
       {menuOpen && (
         <div className={`${styles.menuList} ${menuOpen && styles.open}`}>
           <ul>
@@ -27,12 +43,26 @@ function MenuHamburger() {
               </a>
             </li>
             <li>
-              <a href="#skills" onClick={() => setMenuOpen(false)}>
+              <a
+                href="#skills"
+                onClick={() => (
+                  setMenuOpen(false),
+                  setShowhardSkills(false),
+                  setShowSkills(true)
+                )}
+              >
                 Soft Skills
               </a>
             </li>
             <li>
-              <a href="#skills" onClick={() => setMenuOpen(false)}>
+              <a
+                href="#skills"
+                onClick={() => (
+                  setMenuOpen(false),
+                  setShowhardSkills(true),
+                  setShowSkills(false)
+                )}
+              >
                 Hard Skills
               </a>
             </li>

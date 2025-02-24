@@ -3,9 +3,9 @@ import styles from './Info.module.css'
 
 type InfoProps = {
   showhardSkills: boolean
-  setShowhardSkills: (showhardSkills: boolean) => void
+  setShowhardSkills: React.Dispatch<React.SetStateAction<boolean>>
   showSkills: boolean
-  setShowSkills: (showSkills: boolean) => void
+  setShowSkills: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 function Info(props: InfoProps) {
