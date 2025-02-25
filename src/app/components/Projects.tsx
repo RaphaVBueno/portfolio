@@ -6,10 +6,25 @@ function Projects() {
     {
       title: 'Lista de Tarefas',
       description:
-        'O projeto consiste em uma lista de tarefas, onde o usuário pode adicionar, editar e excluir tarefas. Coincidentemente, após o maior ícone da Academia, o meia Ademir da Guia, encerrar a carreira em 1977, o Palmeiras ficou durante um longo período sem conquistar títulos. Conhecido como "Divino" por conta da grande classe no trato da bola e pela eficiência, Ademir é considerado o maior jogador da história do alviverde, com a impressionante marca de 901 jogos disputados, 153 gols marcados e dezenas de títulos conquistados, entre campeonatos oficiais e torneios amistosos nacionais e internacionais',
+        'Este projeto trata-se de uma aplicação web para organização de tarefas, permitindo que os usuários criem, editem, excluam tarefas, além de poder organiza-las por categorias e tags. Conta com autenticação segura, recuperação de senha via e-mail e edição de perfil com upload de imagem.',
+      techs: [
+        { name: 'Linguagem', techs: 'TypeScript' },
+        {
+          name: 'Frontend',
+          techs:
+            'React, React Router, Material UI (MUI), Axios, React Hook Form, TanStack React Query',
+        },
+        {
+          name: 'Backend',
+          techs: 'Node.js, Express,PostgreSQL, Prisma ORM, Multer, Nodemailer',
+        },
+        { name: 'Segurança', techs: ' Bcrypt, JSON Web Token (JWT)' },
+        { name: 'Validação & Formatação', techs: 'Zod, Date-fns' },
+        { name: 'Testes', techs: 'Vitest, Supertest' },
+      ],
       image: '/projeto01.jpg',
       repoLink: '#',
-      projectLink: '#',
+      projectLink: 'https://todo-app-bav.pages.dev/',
     },
   ]
 
@@ -32,9 +47,14 @@ function Projects() {
             <div className={styles.projectsText}>
               <h1>{project.title}</h1>
               <p>{project.description}</p>
+              {project.techs.map((tech) => (
+                <p key={tech.name}>
+                  <strong>{tech.name}</strong>: {tech.techs}
+                </p>
+              ))}
               <div className={styles.projectsLinks}>
                 <div>
-                  <a href={project.projectLink}>
+                  <a href={project.projectLink} target="_blank">
                     <Image
                       src="/site-projeto.png"
                       alt="site logo"
@@ -42,10 +62,12 @@ function Projects() {
                       height={30}
                     />
                   </a>
-                  <a href={project.projectLink}>Acessar Projeto</a>
+                  <a href={project.projectLink} target="_blank">
+                    Acessar Projeto
+                  </a>
                 </div>
                 <div>
-                  <a href={project.repoLink}>
+                  <a href={project.repoLink} target="_blank">
                     <Image
                       src="/repo.png"
                       alt="github logo"
@@ -53,7 +75,9 @@ function Projects() {
                       height={30}
                     />
                   </a>
-                  <a href={project.repoLink}>Acessar Repositório</a>
+                  <a href={project.repoLink} target="_blank">
+                    Acessar Repositório
+                  </a>
                 </div>
               </div>
             </div>
