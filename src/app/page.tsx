@@ -74,7 +74,17 @@ export default function Home() {
             <p>Olá visitante, eu sou</p>
             <h1>Raphael V. Bueno</h1>
             <h2>Desenvolvedor Web Fullstack</h2>
-            <button className={styles.buttonCv}>Download CV</button>
+            <button
+              className={styles.buttonCv}
+              onClick={() =>
+                window.open(
+                  'https://drive.google.com/file/d/1AMh4nA_T3tPJGSmLeTot7Fem4x7IKLaQ/view?usp=drive_link',
+                  '_blank'
+                )
+              }
+            >
+              Download CV
+            </button>
           </div>
           <div className={styles.avatar}>
             <Image

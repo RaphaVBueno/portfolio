@@ -55,7 +55,7 @@ function Info(props: InfoProps) {
             <li>Eficiente</li>
             <li>Facilidade para aprender</li>
             <li>Comprometimento</li>
-            <li>blabalbalablablba</li>
+            <li>Proatividade</li>
           </ul>
         </div>
       )}
