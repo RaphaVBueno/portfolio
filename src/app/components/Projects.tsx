@@ -23,7 +23,7 @@ function Projects() {
         { name: 'Testes', techs: 'Vitest, Supertest' },
       ],
       image: '/projeto01.jpg',
-      repoLink: '#',
+      repoLink: 'https://github.com/RaphaVBueno/todo-api',
       projectLink: 'https://todo-app-bav.pages.dev/',
     },
   ]
