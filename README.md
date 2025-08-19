@@ -1,37 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Olá, sou Raphael Vieira Bueno! 👋
 
-## Getting Started
+Este repositório contém o código-fonte do meu site de portfólio pessoal.
 
-First, run the development server:
+[🔗 **Link do Portfólio:**](https://portfolio-orcin-psi-55.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O objetivo principal deste site é demonstrar minhas habilidades técnicas e os projetos que desenvolvi.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 💻 Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Este projeto foi construído utilizando as seguintes tecnologias:
 
-## Learn More
+- **Next.js:**
+- **React:**
+- **TypeScript:**
+- **CSS:**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔧 Instalação e Execução
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Se você deseja rodar este projeto localmente, siga os passos abaixo:
 
-## Deploy on Vercel
+1.  Clone o repositório:
+    `git clone https://github.com/RaphaVBueno/portfolio`
+2.  Navegue até o diretório do projeto:
+    `cd portfolio`
+3.  Instale as dependências:
+    `npm install`
+4.  Inicie o servidor de desenvolvimento:
+    `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# porfolio
+### 📬 Contato
+
+Gostou do que viu? Fique à vontade para entrar em contato comigo para discutir oportunidades de trabalho ou colaborações.
+
+- [**LinkedIn**](https://www.linkedin.com/in/raphael-vieira-bueno-41323a332/)
+- **Email:** rafavbueno@gmail.com
+
+Obrigado pela visita!
