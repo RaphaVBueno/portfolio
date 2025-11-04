@@ -21,7 +21,10 @@ function Info(props: InfoProps) {
     'CSS3',
     'Node.js',
     'Express',
+    'Python',
+    'FastAPI',
     'PostgreSQL',
+    'Docker',
     'Prisma',
     'Git',
   ]
