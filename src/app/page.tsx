@@ -98,14 +98,16 @@ export default function Home() {
         <section className={`${styles.section2} reveal`} id="sobre">
           <h2>Sobre Mim</h2>
           <p>
-            Desenvolvedor web fullstack em transição de carreira, com formação
-            em Educação Física e técnico em Administração. Experiência em
-            liderança, gestão e treinamento de equipes, e atendimento do
-            cliente, atualmente coordenador técnico em uma academia. Possuo
-            experiência com JavaScript, TypeScript, Node.js, Express, NextJS,
-            React, Redux, HTML5, CSS3, Git, PostgreSQL e Prisma ORM. Buscando
-            oportunidades como desenvolvedor para aplicar minhas habilidades
-            técnicas e contribuir para projetos inovadores.
+            Desenvolvedor web fullstack em transição de carreira, atualmente
+            cursando Análise e Desenvolvimento de Sistemas. Possuo formação em
+            Educação Física e curso técnico em Administração, com sólida
+            experiência em liderança, gestão de equipes, treinamento de
+            colaboradores e atendimento ao cliente. Tenho conhecimentos e
+            prática com tecnologias como JavaScript, TypeScript, Node.js,
+            Express, Next.js, React, Redux, Python, FastAPI, Docker, HTML5,
+            CSS3, Git, PostgreSQL e Prisma ORM. Busco oportunidades como
+            desenvolvedor para aplicar minhas habilidades, contribuindo com
+            soluções eficientes e inovadoras em ambientes colaborativos.
           </p>
         </section>
         <Info
