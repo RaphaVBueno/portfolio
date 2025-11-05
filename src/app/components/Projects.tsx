@@ -26,6 +26,57 @@ function Projects() {
       repoLink: 'https://github.com/RaphaVBueno/todo-api',
       projectLink: 'https://todo-app-bav.pages.dev/',
     },
+    {
+      title: 'Chatbot de Vendas para Consultoria Fitness',
+      description: `Este projeto é um assistente virtual(chatbot) para WhatsApp, focado na automação de vendas para serviços de consultoria de personal trainer. A aplicação utiliza Inteligência Artificial (LangChain e OpenAI) para interagir com usuários, e apresentar os serviços disponíveis. 
+      O backend se conecta a um painel de gerenciamento frontend, que permite monitorar as conversas em tempo real. Através dessa interface, é possível pausar a automação para contatos específicos, assumir o controle do atendimento e enviar mensagens manualmente. O REPOSITÓRIO DESTE PROJETO É PRIVADO`,
+      techs: [
+        { name: 'Linguagem', techs: 'TypeScript' },
+        {
+          name: 'Frontend',
+          techs:
+            'React, Vite, React Router, Tailwind CSS, Axios, React Hot Toast',
+        },
+        {
+          name: 'Backend',
+          techs: 'Node.js, Express, PostgreSQL, Prisma ORM',
+        },
+        {
+          name: 'Inteligência Artificial (IA)',
+          techs: 'LangChain.js, OpenAI, FAISS (Vector Store)',
+        },
+        { name: 'Comunicação', techs: 'WhatsApp (Baileys), Socket.io' },
+        {
+          name: 'Segurança',
+          techs: ' Bcrypt, JSON Web Token (JWT), Google reCAPTCHA',
+        },
+        { name: 'Validação & Formatação', techs: 'Zod, Date-fns' },
+        { name: 'Testes', techs: 'Jest, Supertest, Docker' },
+      ],
+      image: '/projeto02.jpg',
+      repoLink: 'https://github.com/RaphaVBueno/chatbot-consultoria',
+      projectLink: 'https://chatbot-frontend-omega-three.vercel.app/login',
+    },
+    {
+      title: 'Homepage Pessoal',
+      description: `Este projeto é um dashboard pessoal, projetado para centralizar informações úteis em uma única "homepage". O núcleo da aplicação é um backend em Python (FastAPI) que realiza "web scraping" para extrair os títulos e links mais recentes de sites de notícias pré-definidos.
+      A API do FastAPI envia esses dados para um frontend em React (construído com Vite e Tailwind CSS). A interface exibe o feed de notícias e, além disso, apresenta quadros de lembretes de JavaScript e Python e um widget com a cotação atual de criptomoedas.`,
+      techs: [
+        { name: 'Linguagem', techs: 'TPython, TypeScript' },
+        {
+          name: 'Frontend',
+          techs: 'React, Vite, Tailwind CSS, Axios',
+        },
+        {
+          name: 'Backend',
+          techs: 'FastAPI, Gunicorn, Uvicorn',
+        },
+        { name: 'Web Scraping', techs: 'Requests, BeautifulSoup4, Lxml' },
+      ],
+      image: '/projeto03.jpg',
+      repoLink: 'https://github.com/RaphaVBueno/my-home-page-server',
+      projectLink: 'https://my-homepage-5ir.pages.dev/',
+    },
   ]
 
   return (
